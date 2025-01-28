@@ -1,0 +1,128 @@
+:root {
+  /* Paleta de Cores */
+  --color-primary: #1714B9;
+  --color-primary-hover: #3E52C7;
+  --color-secondary: #B1B10F;
+  --color-accent: #1a1a1a;
+  --color-background: #242424;
+  --color-background-light: #ffffff;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-text-light: #213547;
+
+  /* Cores de Alerta */
+  --color-success: #0F7A1F;
+  --color-success-light: #5CB26E;
+  --color-warning: #FCBE05;
+  --color-warning-light: #FDD150;
+  --color-error: #C12C2C;
+  --color-error-light: #D93636;
+  --color-info: #04A2BF;
+  --color-info-light: #4FBED2;
+
+  /* Borda e Sombras */
+  --color-border: var(--color-primary);
+  --color-shadow: rgba(0, 0, 0, 0.15);
+
+  /* Configurações de Tipografia */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Configurações Gerais */
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Corpo */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Títulos */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Botões */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: var(--color-border);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Estados do Botão */
+button.success {
+  background-color: var(--color-success);
+  color: #ffffff;
+}
+button.success:hover {
+  background-color: var(--color-success-light);
+}
+
+button.warning {
+  background-color: var(--color-warning);
+  color: #212529;
+}
+button.warning:hover {
+  background-color: var(--color-warning-light);
+}
+
+button.error {
+  background-color: var(--color-error);
+  color: #ffffff;
+}
+button.error:hover {
+  background-color: var(--color-error-light);
+}
+
+/* Tema Claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: var(--color-background-light);
+    --color-text: var(--color-text-light);
+    --color-accent: #f9f9f9;
+    --color-border: var(--color-secondary);
+    --color-primary-hover: var(--color-secondary);
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+}
